@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/frontpage.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="is-main is-mobile">
+	<header id="is-header">
+        <div class="is-mobiles-menus">
+        <a class="is-mobile-nav">
+            <img src="images/menu.png" />
+        </a>
+        
+        <h1 class="is-logo"><a href="index.html"><img src="images/logo.png" /></a></h1>
+        <div class="clrsmo"></div>
+        <div class="is-nav"><a href="index.html" class="is-nav-crt"><i>HOME</i></a><a href="news_list.html"><i>NEWS</i></a><a href="aboutus.html"><i>ABOUT US</i></a><a href="our_service.html"><i>OUR SERVICE</i></a><a href="contact.html" class="lastnemu"><i>CONTACT US</i></a><div class="clr"></div></div>
+        </div>
+    </header>
+    
+    <div class="is-frontpage-main">
+    	<div class="is-frontpage-list is-margin w396">
+        	<a href="model.html" class="is-frontpage-a">
+        		<img src="images/is0001.jpg" class="is-frontpage-img"/>
+               
+                <div class="is-frontpage-text">
+                
+               	  <span class="is-frontpage-textop">MODEL<br/> & <br/> MANAGEMENT</span>
+                </div>
+            </a>
+        </div>
+        <div class="is-frontpage-list is-margin w396">
+        	<a href="pr.html" class="is-frontpage-a">
+        		<img src="images/is0002.jpg" class="is-frontpage-img"/>
+                
+                <div class="is-frontpage-text">
+               
+               	  <span class="is-frontpage-textop">PR<br/> & <br/> COMMUNICATION</span>
+                </div>
+            </a>
+        </div>
+        <div class="is-frontpage-list w396">
+        	<a href="events.html" class="is-frontpage-a">
+        		<img src="images/is0003.jpg" class="is-frontpage-img"/>
+                
+                <div class="is-frontpage-text">
+               
+               	  <span class="is-frontpage-textop">EVENT<br/> & <br/> PRODUCTION</span>
+                </div>
+            </a>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <footer id="footer">
+    	<div class="is-footer">
+        	© COPYRIGHT INSTAR GROUP 2014.ALL RIGHTS RESERVED
+        	<div class="is-footer-img">
+            	<a href="javascript:void(0)" class="is-footer-t t"><img src="images/is0005.png" /></a>
+                <a href="javascript:void(0)" class="is-footer-t w"><img src="images/is0006.png" /></a>
+                <a href="javascript:void(0)" class="is-footer-t f"><img src="images/is0007.png" /></a>
+                <a href="javascript:void(0)" class="is-footer-t i"><img src="images/is0008.png" /></a>
+                <a href="javascript:void(0)" class="is-footer-t l"><img src="images/is0009.png" /></a>
+                
+            </div>
+        </div>
+  		
+    </footer>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+/*$(".is-frontpage-list").hover(function(){
+									imgsrc=$(this).find(".is-frontpage-img").attr("src");
+									var imgsrcstar=imgsrc.split("-")[0];
+									$(this).find(".is-frontpage-img").attr("src",imgsrcstar+".jpg");
+										},function(){
+											$(this).find(".is-frontpage-img").attr("src",imgsrc);
+											})*/
+$(".is-frontpage-list").hover(function(){
+									   $(this).find(".is-frontpage-textop").animate({opacity:"0"},800).css({flter:"Alpha(Opacity=0)"});
+									    $(this).find(".is-frontpage-text").animate({opacity:"0"},800).css({flter:"Alpha(Opacity=0)"});
+									   },
+									   function(){
+									    $(this).find(".is-frontpage-textop").animate({opacity:"1"},800).css({flter:"Alpha(Opacity=100)"});
+										$(this).find(".is-frontpage-text").animate({opacity:"1"},800).css({flter:"Alpha(Opacity=100)"});
+									   }
+									   
+									   )
+
+$(".is-mobile-nav").click(function(){
+								   $(".is-nav").slideToggle();
+								   })
+</script>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.is-service-main{ width:1200px; margin:0 auto; padding-top:50px; padding-bottom:115px;}
+.is-servicelist{ float:left; display:block; width:396px;}
+.mr6{ margin-right:6px;}
+.service-title{ text-align:center; font-family:Futura Std,Arial,Arial; font-size:18px; color:#000000; line-height:56px; height:56px; width:100%; overflow:hidden;}
+.is-servicelist p{ font-size:13px; color:#757575; line-height:16px; padding-bottom:20px;font-family:Futura Std,Arial,Arial; }
+.readmore{ color:#29a1d4; font-size:18px; font-family:Futura Std,Arial,Arial; margin-top:8px; display:block;}
+.is-service-hove{ position:relative;}
+.is-service-hove .hoverimg{opacity:0; filter:alpha(opacity=0); position:absolute; top:0; left:0;}
+.is-frontpage-text{ position:absolute; background:url(../images/textbg.png) repeat; top:0; left:0; text-align:center; width:100%; height:auto; height:100%;}
+@media only screen and (max-width:1000px) {
+	.is-service-main{ width:100%; padding:20px 0;}
+	.mr6{ margin-right:0px;}
+	.is-servicelist{ float:none; width:100%;}
+	.is-servicelist img{ width:100%;}
+	.readmore{ padding-bottom:15px; margin-top:0;}
+	}

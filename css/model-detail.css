@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+.back{ padding:33px 0 20px 0;}
+.back a{ font-family:Futura Std,Arial; font-size:24px; font-weight:lighter; color:#29a1d4;}
+.back a img{ margin-right:25px;}
+.is-model-main{padding:12px 0 20px 35px;}
+.is-model-left{ float:left; width:267px;}
+.is-model-left ul li{ border-bottom:1px solid #dcdcdc; height:46px; line-height:46px;}
+.is-model-left ul .is-model-enname{ color:#000; font-family:Futura Std,Arial; font-weight:lighter; font-size:41px;}
+.is-model-left ul .is-model-enname span{ font-size:24px;}
+.is-model-left ul .is-model-cnname{ color:#202020; font-size:20px;}
+.is-model-center{ padding:0px 0 0 82px; width:539px; float:left;}
+.is-model-center li{ font-family:Futura Std,Arial; font-weight:lighter; font-size:15px; color:#9e9e9e; float:left; display:block; width:265px; height:27px; line-height:27px;}
+.is-model-center li span{ padding-left:5px; color:#212121;}
+.is-model-right{ float:left; width:230px;}
+.is-model-right a{ font-weight:lighter; line-height:42px; height:40px; display:block; font-family:Futura Std,Arial; font-size:15px; padding-left:36px; color:#29a1d4;}
+.is-model-right .downloadmodel{ background:url(../images/download.png) no-repeat left center;}
+.is-model-right .printpage{ background:url(../images/print.png) no-repeat left center;}
+.is-model-table{ height:55px; padding-top:24px;}
+.is-model-table a{ display:block; float:left; font-family:Futura Std,Arial; color:#757575; font-size:20px; font-weight:lighter;}
+.is-model-table span{ width:1px; display:block; float:left; margin:0 25px; height:25px; background:#c5c5c5;}
+.is-model-table a:hover{ color:#29a1d4;}
+.is-model-table .is-model-cur{ color:#29a1d4;}
+
+@media only screen and (max-width:1000px) {
+	.is-model-main{ padding:15px 0}
+	.is-model-left{ width:100%;}
+	.is-model-center{ width:100%; padding:15px 0 0 0;}
+	.is-model-center li{ width:50%; overflow:hidden; height:27px;}
+	.is-model-right{ display:none;}
+	
+	
+	}
+@media only screen and (min-width:320px) and (max-width:400px){
+	.back{ padding:15px 0 0 0;}
+	.is-model-left ul .is-model-enname{ font-size:30px;}
+	.is-model-left ul .is-model-enname span{ font-size:18px;}
+	.is-model-center li{ font-size:12px;}
+	.is-model-table{ padding:10px 0 0 0;}
+	.is-model-table a{ font-size:13px;}
+	.is-model-table span{ height:17px;}
+	.is-model-table span{ margin:0 20px;}
+	.is-model-table{ height:23px;}
+	.is-model-main{ padding-bottom:0px;}
+	}
+@media only screen and (min-width:1px) and (max-width:299px){
+	.is-model-main{ padding-bottom:0px;}
+	#footer{ margin-top:-30px;}
+	.back{ padding:0;}
+	.is-model-table a{ font-size:13px;}
+	.is-model-table span{ margin:0 10px; height:15px;}
+	.is-model-table{ height:25px;}
+	
+	}
+	
+@media only screen and (min-width:300px) and (max-width:319px){
+	.is-model-table a{ font-size:18px;}
+	.is-model-table{ height:25px;}
+	.back{ padding:0;}
+	.is-model-table span{ margin:0 10px; height:20px;}
+	}
