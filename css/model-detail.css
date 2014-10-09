@@ -2,23 +2,23 @@
 /* CSS Document */
 
 .back{ padding:33px 0 20px 0;}
-.back a{ font-family:Futura Std,Arial; font-size:24px; font-weight:lighter; color:#29a1d4;}
+.back a{ font-family:Nunito; font-size:24px; font-weight:lighter; color:#29a1d4;}
 .back a img{ margin-right:25px;}
 .is-model-main{padding:12px 0 20px 35px;}
 .is-model-left{ float:left; width:267px;}
 .is-model-left ul li{ border-bottom:1px solid #dcdcdc; height:46px; line-height:46px;}
-.is-model-left ul .is-model-enname{ color:#000; font-family:Futura Std,Arial; font-weight:lighter; font-size:41px;}
+.is-model-left ul .is-model-enname{ color:#000; font-family:Nunito; font-weight:lighter; font-size:41px;}
 .is-model-left ul .is-model-enname span{ font-size:24px;}
-.is-model-left ul .is-model-cnname{ color:#202020; font-size:20px;}
+.is-model-left ul .is-model-cnname{ color:#202020; font-size:20px; font-family:微软雅黑;}
 .is-model-center{ padding:0px 0 0 82px; width:539px; float:left;}
-.is-model-center li{ font-family:Futura Std,Arial; font-weight:lighter; font-size:15px; color:#9e9e9e; float:left; display:block; width:265px; height:27px; line-height:27px;}
+.is-model-center li{ font-family:Nunito; font-weight:lighter; font-size:15px; color:#9e9e9e; float:left; display:block; width:265px; height:27px; line-height:27px;}
 .is-model-center li span{ padding-left:5px; color:#212121;}
 .is-model-right{ float:left; width:230px;}
-.is-model-right a{ font-weight:lighter; line-height:42px; height:40px; display:block; font-family:Futura Std,Arial; font-size:15px; padding-left:36px; color:#29a1d4;}
+.is-model-right a{ font-weight:lighter; line-height:42px; height:40px; display:block; font-family:Nunito; font-size:15px; padding-left:36px; color:#29a1d4;}
 .is-model-right .downloadmodel{ background:url(../images/download.png) no-repeat left center;}
 .is-model-right .printpage{ background:url(../images/print.png) no-repeat left center;}
 .is-model-table{ height:55px; padding-top:24px;}
-.is-model-table a{ display:block; float:left; font-family:Futura Std,Arial; color:#757575; font-size:20px; font-weight:lighter;}
+.is-model-table a{ display:block; float:left; font-family:Nunito; color:#757575; font-size:20px; font-weight:lighter;}
 .is-model-table span{ width:1px; display:block; float:left; margin:0 25px; height:25px; background:#c5c5c5;}
 .is-model-table a:hover{ color:#29a1d4;}
 .is-model-table .is-model-cur{ color:#29a1d4;}

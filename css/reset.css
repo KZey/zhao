@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Nunito:300);
 
 * {border:0;margin:0;padding:0;}
 body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {margin:0;padding:0;border:0;font-family:Arial, Helvetica, sans-serif; font-size:14px;-webkit-text-size-adjust:none; color:#000;}
@@ -15,7 +16,7 @@ body{ background:#ffffff;}
 .is-logo{ text-align:center; display:block; width:100%; padding:77px 0 40px 0; height:39px;}
 .is-nav{ width:700px; margin:0 auto; text-align:center;}
 /*.is-nav span{ display:inline-block; float:left;height:22px;font-size:16px; margin:0 25px; width:1px; border-left:1px solid #c8c8c8;}*/
-.is-nav a{ font-family:Futura Std,Arial; padding:0 23px; font-size:16px; color:#757575; border-right:1px solid #c8c8c8; font-weight:lighter;}
+.is-nav a{ font-family:Nunito; padding:0 23px; font-size:16px; color:#757575; border-right:1px solid #c8c8c8; font-weight:lighter;}
 .is-nav a:hover{ color:#29a1d4;}
 .is-nav .lastnemu{ border-right:none;}
 .is-nav .is-nav-crt{ color:#29a1d4;}
@@ -27,10 +28,10 @@ body{ background:#ffffff;}
 .is-women-header{ width:1116px; margin:0 auto;}
 .is-women .is-women-menu{ float:left; width:800px; padding-left:15px; text-align:left;}
 .is-women .is-logo{ padding:0; width:305px; float:right;}
-.is-women-title{ font-weight:normal; font-family:Futura Std,Arial; color:#29a1d4; padding-bottom:20px; padding-left:38px; font-size:41px; padding-top:28px;}
+.is-women-title{ font-weight:normal; font-family:Nunito; color:#29a1d4; padding-bottom:20px; padding-left:38px; font-size:41px; padding-top:28px;}
 .is-women-title span{ font-size:24px;font-weight: lighter;}
 /*footer*/
-.is-footer{ font-weight:lighter; width:100%; text-align:center; font-size:12px; font-family:Futura Std,Arial; color:#a3a3a3}
+.is-footer{ font-weight:lighter; width:100%; text-align:center; font-size:12px; font-family:Nunito; color:#a3a3a3}
 .is-footer a{ display:inline-block; margin:0 15px;}
 .is-footer-img{ height:40px; padding-top:15px;}
 .is-footer-img img{width:20px;}
@@ -45,7 +46,7 @@ body{ background:#ffffff;}
 #sucai{width:635px;height:200px;padding-right:35px;overflow:hidden;}
 #sucai p{color:#999;font-size:13px; line-height:16px; padding-top:15px;text-align:left;}
 #sucai p a{ color:#41a8d7;}
-.is-model-info-right H2{ font-family:Futura Std,Arial; font-size:34px; color:#212121; font-weight:normal;}
+.is-model-info-right H2{ font-family:Nunito; font-size:34px; color:#212121; font-weight:normal;}
 
 @media only screen and (max-width:1000px) {
 	

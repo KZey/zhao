@@ -8,7 +8,7 @@
 .is-frontpage-list .is-frontpage-a{ width:100%; height:auto; display:block; position:relative;}
 .is-margin{ margin-right:5px;}
 .is-frontpage-text{ position:absolute; background:url(../images/textbg.png) repeat; top:0; left:0; text-align:center; width:100%; height:auto; height:100%;}
-.is-frontpage-textop{ font-family:Futura Std,Arial; width:100%; text-align:center; top:171px; position:absolute; left:0; font-size:30px; color:#ffffff;}
+.is-frontpage-textop{ font-family:Nunito; width:100%; text-align:center; top:171px; position:absolute; left:0; font-size:30px; color:#ffffff;}
 /*.is-frontpage-list .is-frontpage-a:hover .is-frontpage-text{ display:none;}*/
 .w294{ width:294px; height:294px; margin-bottom:5px;}
 .w274{ width:274px; height:274px; margin-bottom:5px;}

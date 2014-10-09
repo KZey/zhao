@@ -5,21 +5,21 @@
 .is-news-banner{ width:1198px; height:131px; margin:0 auto;}
 .is-news-left{ padding-top:46px; width:270px; float:left; padding-left:72px;}
 .is-news-left li{ height:46px; line-height:46px; width:163px; border-bottom:1px solid #cccecf;}
-.is-news-left li a{ color:#212121; font-family:Futura Std,Arial; font-size:18px; display:block; width:163px; height:46px;}
+.is-news-left li a{ color:#212121; font-family:Nunito; font-size:18px; display:block; width:163px; height:46px;}
 .is-news-left .is-news-cur a{ color:#41a8d7;}
 .is-news-left li a:hover{ color:#41a8d7;}
 .is-news-right{ width:850px; float:left; padding-top:48px;}
-.is-news-right h2 a{ font-family:Futura Std,Arial,Arial; font-weight:normal; color:#41a8d7; font-size:16px;}
-.news-title{ font-family:Futura Std,Arial; color:#000000; color:#000000; font-size:20px; padding:25px 0 15px 0;}
-.news-title1{ font-family:Futura Std,Arial; color:#000000; color:#000000; font-size:20px; padding:0 0 15px 0;}
+.is-news-right h2 a{ font-family:Nunito,Arial; font-weight:normal; color:#41a8d7; font-size:16px;}
+.news-title{ font-family:Nunito; color:#000000; color:#000000; font-size:20px; padding:25px 0 15px 0;}
+.news-title1{ font-family:Nunito; color:#000000; color:#000000; font-size:20px; padding:0 0 15px 0;}
 .all-news{ display:none; position:relative;}
 .all-news .all-newslink{ width:100%; display:block; margin:10px 0 0 0; border:1px solid #d8d8d8; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; height:40px; line-height:40px; color:#5fa5d8; padding-left:2%;}
 .all-news .all-newslink img{ position:absolute; top:16px; right:22px;}
 .is-news-li{ margin-top:20px; width:100%; display:none;}
 .is-news-li li{ line-height:45px; width:100%; height:45px; overflow:hidden;}
-.is-news-li li a{ color:#5fa5d8; font-family:Futura Std,Arial;}
-.is-newslititle{ padding:15px 0; color:#000000; font-size:20px; font-family:Futura Std,Arial;}
-.news-list li{ font-size:16px; color:#41a8d7; font-family:Futura Std,Arial; line-height:45px; height:45px; overflow:hidden;}
+.is-news-li li a{ color:#5fa5d8; font-family:Nunito;}
+.is-newslititle{ padding:15px 0; color:#000000; font-size:20px; font-family:Nunito;}
+.news-list li{ font-size:16px; color:#41a8d7; font-family:Nunito; line-height:45px; height:45px; overflow:hidden;}
 .news-list li a{ color:#41a8d7;}
 @media only screen and (max-width:1000px) {
 	.is-news-banner{ width:100%; height:auto;}
