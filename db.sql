@@ -1,4 +1,4 @@
-drop database if exist instar;
+drop database if exists instar;
 
 create database instar;
 
