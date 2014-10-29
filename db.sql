@@ -108,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `model` (
   `name_cn` varchar(50) NOT NULL DEFAULT '',
   `height` varchar(20) NOT NULL DEFAULT '',
   `shoes` varchar(20) NOT NULL DEFAULT '',
+  `bust` varchar(20) NOT NULL DEFAULT '',
   `hair` varchar(20) NOT NULL DEFAULT '',
   `waist` varchar(20) NOT NULL DEFAULT '',
   `eyes` varchar(20) NOT NULL DEFAULT '',
