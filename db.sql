@@ -53,11 +53,12 @@ CREATE TABLE IF NOT EXISTS news_type (
 CREATE TABLE IF NOT EXISTS `public_relation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL DEFAULT '',
+  `thumbNail` varchar(50) NOT NULL DEFAULT '',
   `description` varchar(500) NOT NULL DEFAULT '',
   `city` varchar(30) NOT NULL DEFAULT '',
   `address` varchar(50) NOT NULL,
-  `dateCreate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Status` tinyint(1) NOT NULL DEFAULT 1,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -80,11 +81,12 @@ CREATE TABLE IF NOT EXISTS `public_relation_image` (
 CREATE TABLE IF NOT EXISTS `event` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL DEFAULT '',
+  `thumbNail` varchar(50) NOT NULL DEFAULT '',
   `description` varchar(500) NOT NULL DEFAULT '',
   `city` varchar(30) NOT NULL DEFAULT '',
   `address` varchar(50) NOT NULL,
-  `dateCreate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Status` tinyint(1) NOT NULL DEFAULT 1,
+  `createDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -113,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `model` (
   `eyes` varchar(20) NOT NULL DEFAULT '',
   `hips` varchar(20) NOT NULL DEFAULT '',
   `modelCard` varchar(100) NOT NULL DEFAULT '',
-  `Status` tinyint(1) NOT NULL DEFAULT 1,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -121,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `model` (
 
 CREATE TABLE IF NOT EXISTS `model_image` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `eventId` int(11) NOT NULL,
+  `modelId` int(11) NOT NULL,
   `typeId` tinyint(1) NOT NULL COMMENT '1.protfolio; 2.polaroids; 3.press',
   `picture` varchar(50) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
