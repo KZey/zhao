@@ -1,3 +1,8 @@
+<?php
+include_once("include/connection.php");
+include_once("include/functions.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,17 +24,18 @@
         
         <h1 class="is-logo"><a href="index.html"><img src="images/logo.png"></a></h1>
         <div class="clrsmo"></div>
-        <div class="is-nav is-women-menu "><a class="is-nav-crt" href="pr.php"><i>PR & COMMUNICATION</i></a><a class="lastnemu" href="pr_category.php"><i>CASES</i></a><div class="clr"></div></div>
+        <div class="is-nav is-women-menu "><a class="is-nav-crt" href="model.php"><i>ABOUT MANAGMENT</i></a><a href="model_women.php"><i>WOMEN</i></a><a href="model_men.php"><i>MEN</i></a><a href="news.php"><i>NEWS</i></a><a href="become_a_model.html" class="lastnemu"><i>BECOME A MODEL</i></a><div class="clr"></div></div>
         
         <div class="clr"></div>
         </div>
         
-        <div class="is-women-title">PR <span>&amp; COMMUNICATION</span></div>
+        <div class="is-women-title">MODEL <span>&amp; MANAGEMENT</span></div>
         <div class="is-banner">
         <div class="index_banner" id="banner_tabs">
-                <li class="third"><a href="javascript:void(0);"><img src="images/pr_banner_1.jpg"/></a></li>
-                <li class="fifth"><a href="javascript:void(0);"><img src="images/pr_banner_2.jpg"/></a></li>      
-               <li class="fifth"><a href="javascript:void(0);"><img src="images/pr_banner_3.jpg"/></a></li>
+              <ul>
+                <li class="third"><a href="javascript:void(0);"><img src="images/model_banner_1.jpg"/></a></li>
+                <li class="fifth"><a href="javascript:void(0);"><img src="images/model_banner_2.jpg"/></a></li>      
+               <li class="fifth"><a href="javascript:void(0);"><img src="images/model_banner_3.jpg"/></a></li>  
               </ul>
               <div class="clr"></div>
               <cite><span class="cur">1</span><span>2</span><span>3</span></cite>
@@ -39,7 +45,7 @@
         	
             
             <div class="is-model-info-right w635" id="sucai">
-            	<h2>OUR PR SERVICE</h2>
+            	<h2>ABOUT US</h2>
                 <p>instar Model Management is an independent boutique agency, focusing on the top tier of talent in China.</p>
                 
                 <p>Combining over 10 years of management in the progressive Chinese market and first hand experience in the western European modeling industry, Instars' avant-garde management style is truly unique and personal.</p>
@@ -56,6 +62,7 @@
                 	<a href="news.html">Lorem ipsum dolor sit amet, consectetur adipiscing.</a>
                     <a href="news.html">Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</a>
                     <a href="news.html">Quis autem vel eum iure reprehenderit qui in ea voluptate.</a>
+
                 </div>
             </div>
             
@@ -109,4 +116,5 @@ $(function(){
 $(".is-mobile-nav").click(function(){
 								   $(".is-nav").slideToggle();
 								   })
+
 </script>

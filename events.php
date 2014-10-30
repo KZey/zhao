@@ -19,17 +19,18 @@
         
         <h1 class="is-logo"><a href="index.html"><img src="images/logo.png"></a></h1>
         <div class="clrsmo"></div>
-        <div class="is-nav is-women-menu "><a class="is-nav-crt" href="pr.php"><i>PR & COMMUNICATION</i></a><a class="lastnemu" href="pr_category.php"><i>CASES</i></a><div class="clr"></div></div>
+       <div class="is-nav is-women-menu "><a class="is-nav-crt" href="events.php"><i>EVENT & PRODUCTION</i></a><a href="event_category.php" class="lastnemu"><i>CASE</i></a><div class="clr"></div></div>
         
         <div class="clr"></div>
         </div>
         
-        <div class="is-women-title">PR <span>&amp; COMMUNICATION</span></div>
+        <div class="is-women-title">EVENT & <span>PRODUCTION</div>
         <div class="is-banner">
         <div class="index_banner" id="banner_tabs">
-                <li class="third"><a href="javascript:void(0);"><img src="images/pr_banner_1.jpg"/></a></li>
-                <li class="fifth"><a href="javascript:void(0);"><img src="images/pr_banner_2.jpg"/></a></li>      
-               <li class="fifth"><a href="javascript:void(0);"><img src="images/pr_banner_3.jpg"/></a></li>
+              <ul>
+                <li class="third"><a href="javascript:void(0);"><img src="images/event_banner_1.jpg"/></a></li>
+                <li class="fifth"><a href="javascript:void(0);"><img src="images/event_banner_2.jpg"/></a></li>      
+               <li class="fifth"><a href="javascript:void(0);"><img src="images/event_banner_3.jpg"/></a></li>  
               </ul>
               <div class="clr"></div>
               <cite><span class="cur">1</span><span>2</span><span>3</span></cite>
@@ -39,7 +40,7 @@
         	
             
             <div class="is-model-info-right w635" id="sucai">
-            	<h2>OUR PR SERVICE</h2>
+            	<h2>ABOUT OUR SERVICE</h2>
                 <p>instar Model Management is an independent boutique agency, focusing on the top tier of talent in China.</p>
                 
                 <p>Combining over 10 years of management in the progressive Chinese market and first hand experience in the western European modeling industry, Instars' avant-garde management style is truly unique and personal.</p>

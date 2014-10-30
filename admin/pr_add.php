@@ -65,16 +65,17 @@ $filetype = $_FILES["thumbNail"]["type"];
 $filesize = $_FILES["thumbNail"]["size"]/1024;
 $filepath = $_FILES["thumbNail"]["tmp_name"];
 
-  if ($_FILES["thumbNail"]["error"] > 0)
+
+  if (empty($_FILES["thumbNail"]["tmp_name"]))
     {
-    echo "Error: " . $_FILES["thumbNail"]["error"] . "<br />";
+      $thumbNail = '';
     }
   else
   {
-
       $newfile = "./upload/pr-tn-".date('ymdhis').".png";
       move_uploaded_file($filepath,$newfile);
       $thumbNail = $newfile;
+  }
 
       $sql = "insert into public_relation values('', '".$title."', '".$thumbNail."','".$description."', '".$city."', '".$address."','".$createDate."', ".$status.") "; 
       //echo $sql."<br/>"; 
@@ -88,7 +89,6 @@ $filepath = $_FILES["thumbNail"]["tmp_name"];
           echo  $err[] = "Operation failed, please check what you input or contact system admin, <a href='pr.php'>Go back</a> "; 
       } 
  
-  }// end of upload file eror
 
 } else { 
  

@@ -32,6 +32,13 @@ include_once("include/functions.php");
     <link rel="stylesheet" href="assets/plugins/Font-Awesome/css/font-awesome.css" />
     <!--END GLOBAL STYLES -->
 
+
+    <!-- PAGE LEVEL STYLES -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap-fileupload.min.css" />
+
+    <!-- END PAGE LEVEL  STYLES -->
+
     <!-- PAGE LEVEL STYLES -->
     <!-- END PAGE LEVEL  STYLES -->
        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,18 +60,37 @@ $city = $_POST['city'];
 $address = $_POST['address'];
 $status = $_POST['status'];
  
-$sql = "insert into event values('', '".$title."', '".$description."', '".$city."', '".$address."','".$createDate."', ".$status.") "; 
-//echo $sql."<br/>"; 
-$result = mysql_query($sql);  
-    if ( $result ) {  
+$filename = $_FILES["thumbNail"]["name"];
+$filetype = $_FILES["thumbNail"]["type"];
+$filesize = $_FILES["thumbNail"]["size"]/1024;
+$filepath = $_FILES["thumbNail"]["tmp_name"];
+
+
+
+  if (empty($_FILES["thumbNail"]["tmp_name"]))
+    {
+      $thumbNail = '';
+    }
+  else
+  {
+      $newfile = "./upload/event-tn-".date('ymdhis').".png";
+      move_uploaded_file($filepath,$newfile);
+      $thumbNail = $newfile;
+  }
+
+      $sql = "insert into event values('', '".$title."', '".$thumbNail."','".$description."', '".$city."', '".$address."','".$createDate."', ".$status.") "; 
+      //echo $sql."<br/>"; 
+      $result = mysql_query($sql);  
+      if ( $result ) {  
            session_start(); 
            session_regenerate_id (true);  
            $_SESSION['iflogin']= 1;   
            header("Location: event.php"); 
-        } else { 
+      } else { 
           echo  $err[] = "Operation failed, please check what you input or contact system admin, <a href='event.php'>Go back</a> "; 
-        } 
+      } 
  
+
 } else { 
  
 ?>
@@ -79,7 +105,7 @@ $result = mysql_query($sql);
         <div id="top">
 
             <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
-                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle">
+                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-eventimary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle">
                     <i class="icon-align-justify"></i>
                 </a>
                 <!-- LOGO SECTION -->
@@ -158,7 +184,7 @@ $result = mysql_query($sql);
                     <div class="col-lg-12">
 
 
-                        <h2>EVENT Management</h2>
+                        <h2>PR Management</h2>
 
 
 
@@ -182,7 +208,7 @@ $result = mysql_query($sql);
 
         <div id="div-1" class="accordion-body collapse in body">
 
-            <form class="form-horizontal" action='event_add.php' method='post' >
+            <form class="form-horizontal" action='event_add.php' method='post' enctype="multipart/form-data" >
 
                 <div class="form-group">
 
@@ -197,6 +223,23 @@ $result = mysql_query($sql);
                     </div>
 
                 </div>
+
+
+                 <div class="form-group">
+                        <label for="text4" class="control-label col-lg-4">Thumbnail</label>
+
+                        <div class="col-lg-8">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="assets/img/demoUpload.jpg" alt="" /></div>
+                                <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                <div>
+                                    <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"  name = 'thumbNail' /></span>
+                                    <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+
+                 </div>
 
 <!--
                 <div class="form-group">
@@ -321,6 +364,12 @@ $result = mysql_query($sql);
      <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- END GLOBAL SCRIPTS -->
+
+         <!-- PAGE LEVEL SCRIPTS -->
+    <script src="assets/plugins/jasny/js/bootstrap-fileupload.js"></script>
+         <!-- END PAGE LEVEL SCRIPTS -->
+
+
 </body>
 <?php
 }

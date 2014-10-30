@@ -24,8 +24,8 @@ include_once("include/functions.php");
         <h1 class="is-logo"><a href="index.html"><img src="images/logo.png"></a></h1>
         <div class="clrsmo"></div>
         <div class="is-nav is-women-menu ">
-		<a class="is-nav-crt" href="pr.html"><i>PR & COMMUNICATION</i></a>
-		<a class="lastnemu" href="pr_category.html"><i>CASES</i></a><div class="clr"></div></div>
+		<a class="is-nav-crt" href="pr.php"><i>PR & COMMUNICATION</i></a>
+		<a class="lastnemu" href="pr_category.php"><i>CASES</i></a><div class="clr"></div></div>
         
         <div class="clr"></div>
         </div>

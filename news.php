@@ -26,7 +26,7 @@ include_once("include/functions.php");
         
         <h1 class="is-logo"><a href="index.html"><img src="images/logo.png" /></a></h1>
         <div class="clrsmo"></div>
-        <div class="is-nav"><a href="index.html"><i>HOME</i></a><a href="news_list.html" class="is-nav-crt"><i>NEWS</i></a><a href="aboutus.html"><i>ABOUT US</i></a><a href="our_service.html"><i>OUR SERVICE</i></a><a href="contact.html" class="lastnemu"><i>CONTACT US</i></a><div class="clr"></div></div>
+        <div class="is-nav"><a href="index.html"><i>HOME</i></a><a href="news.php" class="is-nav-crt"><i>NEWS</i></a><a href="aboutus.html"><i>ABOUT US</i></a><a href="our_service.html"><i>OUR SERVICE</i></a><a href="contact.html" class="lastnemu"><i>CONTACT US</i></a><div class="clr"></div></div>
         </div>
     </header>
     
@@ -67,7 +67,7 @@ $sql = $sql. " order by id desc";
     while ($result = mysql_fetch_array($dataset))
 {
 ?>
-                	<li><a href="news.html"><?php echo $result['title'];?></a></li>
+                	<li><a href="news_detail.php?id=<?php echo $result['id'];?>"><?php echo $result['title'];?></a></li>
 <?php
 }
 ?>  

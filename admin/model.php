@@ -101,11 +101,6 @@ include_once("include/functions.php");
                     <h5 class="media-heading">Admin</h5>
                     <ul class="list-unstyled user-info">
                         
-                        <li>
-                             <a class="btn btn-success btn-xs btn-circle" style="width: 10px;height: 12px;"></a> Online
-                           
-                        </li>
-                       
                     </ul>
                 </div>
                 <br />

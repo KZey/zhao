@@ -17,7 +17,7 @@ include_once("include/functions.php");
 <?php
 if(isset($_GET['id'])){
 $id = $_GET['id'];
-$sql = "select *  from public_relation where id = ".$id;
+$sql = "select *  from event where id = ".$id;
 //echo $sql."<br/>";
 $result = mysql_query($sql);
 while($row = mysql_fetch_array($result))
@@ -44,8 +44,8 @@ while($row = mysql_fetch_array($result))
         
         <div class="is-nav is-women-menu ">
 
-	<a href="pr.php"><i>PR & COMMUNICATION</i></a>
-	<a  class="is-nav-crt lastnemu" href="pr_category.php"><i>CASES</i></a>
+	<a href="events.php"><i>EVENT & PRODUCTION</i></a>
+	<a  class="is-nav-crt lastnemu" href="event_category.php"><i>CASES</i></a>
 
         <div class="clr"></div></div>
         
@@ -62,7 +62,7 @@ while($row = mysql_fetch_array($result))
             <div class="event-right">
 
 <?php
-$sql = "select *  from public_relation_image where publicRelationId = ".$id;
+$sql = "select *  from event_image where publicRelationId = ".$id;
 //echo $sql."<br/>";
 $result = mysql_query($sql);
 while($row = mysql_fetch_array($result))

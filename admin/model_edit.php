@@ -33,6 +33,7 @@ include_once("include/functions.php");
     <!--END GLOBAL STYLES -->
 
     <!-- PAGE LEVEL STYLES -->
+<link rel="stylesheet" href="assets/css/bootstrap-fileupload.min.css" />
     <!-- END PAGE LEVEL  STYLES -->
        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -52,6 +53,7 @@ if($_POST['action']=='edit'){
    $name_cn = $_POST['name_cn'];
    $height = $_POST['height'];
    $shoes = $_POST['shoes'];
+   $bust = $_POST['bust'];
    $hair = $_POST['hair'];
    $waist = $_POST['waist'];
    $modelCard_old = $_POST['modelCard_old'];
@@ -60,12 +62,13 @@ if($_POST['action']=='edit'){
    $status = $_POST['status'];
 
 
-  if ($_FILES["modelCard"]["error"] > 0)
+$filepath = $_FILES["modelCard"]["tmp_name"];
+  if (empty($filepath))
     {
-    echo "Error: " . $_FILES["modelCard"]["error"] . "<br />";
+      $modelCard = $modelCard_old;
     }
   else
-    {
+  {
       $filepath = $_FILES["modelCard"]["tmp_name"];
       $newfile = "./upload/mc-".date('ymdhis').".png";
       move_uploaded_file($filepath,$newfile);
@@ -74,9 +77,9 @@ if($_POST['action']=='edit'){
     }
 
 if(isset($modelCard)){
-  $sql = "update model set gender = '".$gender."', name = '".$name."', `name_cn` = '".$name_cn."', height = '".$height."', shoes = '".$shoes."', hair = '".$hair."', waist = '".$waist."', eyes = '".$eyes."', hips = '".$hips."', modelCard = '".$modelCard."', status = '".$status."' where id = ".$id;
+  $sql = "update model set gender = '".$gender."', name = '".$name."', `name_cn` = '".$name_cn."', height = '".$height."', shoes = '".$shoes."', bust = '".$bust."', hair = '".$hair."', waist = '".$waist."', eyes = '".$eyes."', hips = '".$hips."', modelCard = '".$modelCard."', status = '".$status."' where id = ".$id;
 } else {
-  $sql = "update model  set gender = '".$gender."', name = '".$name."', `name_cn` = '".$name_cn."', height = '".$height."', shoes = '".$shoes."', hair = '".$hair."', waist = '".$waist."', eyes = '".$eyes."', hips = '".$hips."', status = '".$status."' where id = ".$id;
+  $sql = "update model  set gender = '".$gender."', name = '".$name."', `name_cn` = '".$name_cn."', height = '".$height."', shoes = '".$shoes."', bust = '".$bust."', hair = '".$hair."', waist = '".$waist."', eyes = '".$eyes."', hips = '".$hips."', status = '".$status."' where id = ".$id;
 }
  
 //$sql."<br/>"; 
@@ -373,20 +376,22 @@ while($row = mysql_fetch_array($result))
 
 
 
-                <div class="form-group">
+                 <div class="form-group">
+                        <label for="text4" class="control-label col-lg-4">Model Card</label>
 
-                    <label for="text1" class="control-label col-lg-4">Model Card</label>
+                        <div class="col-lg-8">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="assets/img/demoUpload.jpg" alt="" /></div>
+                                <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                <div>
+                                    <span class="btn btn-file btn-primary"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file"  name = 'modelCard' /></span>
+                                    <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                </div>
+                            </div>
+                        </div>
 
+                 </div>
 
-
-                    <div class="col-lg-8">
-                        <a href='<?php echo $modelCard;?>'>View</a>
-                        <input type="file" name="modelCard" id="modelCard"/>
-                        <input type="hidden" name="modelCard_old" id="modelCard_old" value='<?php echo $modelCard;?>'/>
-                        
-                    </div>
-
-                </div>
 
 
 
@@ -445,6 +450,7 @@ while($row = mysql_fetch_array($result))
      <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- END GLOBAL SCRIPTS -->
+    <script src="assets/plugins/jasny/js/bootstrap-fileupload.js"></script>
 </body>
 <?php
 }else {

@@ -55,32 +55,44 @@ $name_cn = trim($_POST['name_cn']);
 $height = $_POST['height'];
 $height = $_POST['height'];
 $shoes = $_POST['shoes'];
+$bust = $_POST['bust'];
 $hair = $_POST['hair'];
 $waist = $_POST['waist'];
 $eyes = $_POST['eyes'];
 $hips = $_POST['hips'];
 $status = $_POST['status'];
 
-$filename = $_FILES["modelCard"]["name"];
-$filetype = $_FILES["modelCard"]["type"];
-$filesize = $_FILES["modelCard"]["size"]/1024;
 $filepath = $_FILES["modelCard"]["tmp_name"];
+$filepath1 = $_FILES["thumbNail"]["tmp_name"];
 
 
-  if ($_FILES["modelCard"]["error"] > 0)
+
+  if (empty($filepath1))
     {
-    echo "Error: " . $_FILES["modelCard"]["error"] . "<br />";
+      $thumbNail = '';
     }
   else
   {
+      $newfile = "./upload/model-tn-".date('ymdhis').".png";
+      move_uploaded_file($filepath,$newfile);
+      $thumbNail = $newfile;
+  }
 
-      $newfile = "./upload/mc-".date('ymdhis').".png";
+  if (empty($filepath))
+    {
+      $modelCard = '';
+    }
+  else
+  {
+      $newfile = "./upload/model-mc-".date('ymdhis').".png";
       move_uploaded_file($filepath,$newfile);
       $modelCard = $newfile;
+  }
+
 
  
-      $sql = "insert into model values('', '".$gender."', '".$name."', '".$name_cn."', '".$height."','".$shoes."','".$hair."','".$waist."','".$eyes."','".$hips."','".$modelCard."', ".$status.") "; 
-      $sql."<br/>"; 
+      $sql = "insert into model values('', '".$gender."', '".$name."', '".$name_cn."', '".$thumbNail."','".$height."','".$shoes."','".$bust."','".$hair."','".$waist."','".$eyes."','".$hips."','".$modelCard."', ".$status.") "; 
+      //echo $sql."<br/>"; 
       $result = mysql_query($sql);  
       if ( $result ) {  
            session_start(); 
@@ -91,7 +103,6 @@ $filepath = $_FILES["modelCard"]["tmp_name"];
          echo  $err[] = "Operation failed, please check what you input or contact system admin, <a href='model.php'>Go back</a> "; 
       }
 
-   }// end of upload file eror
  
  
 } else { 
@@ -154,10 +165,6 @@ $filepath = $_FILES["modelCard"]["tmp_name"];
                     <h5 class="media-heading">Admin</h5>
                     <ul class="list-unstyled user-info">
                         
-                        <li>
-                             <a class="btn btn-success btn-xs btn-circle" style="width: 10px;height: 12px;"></a> Online
-                           
-                        </li>
                        
                     </ul>
                 </div>
@@ -269,6 +276,22 @@ $filepath = $_FILES["modelCard"]["tmp_name"];
                 </div>
 
 
+                 <div class="form-group">
+                        <label for="text4" class="control-label col-lg-4">Thumbnail</label>
+
+                        <div class="col-lg-8">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="assets/img/demoUpload.jpg" alt="" /></div>
+                                <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                <div>
+                                    <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"  name = 'thumbNail' /></span>
+                                    <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+
+                 </div>
+
 
                 <div class="form-group">
 
@@ -287,8 +310,6 @@ $filepath = $_FILES["modelCard"]["tmp_name"];
 
                     <label for="text1" class="control-label col-lg-4">Shoes</label>
 
-
-
                     <div class="col-lg-8">
 
                         <input type="text" id="shoes" name='shoes' placeholder="Shoes" class="form-control" maxlength='20' />
@@ -296,6 +317,19 @@ $filepath = $_FILES["modelCard"]["tmp_name"];
                     </div>
 
                 </div>
+
+                <div class="form-group">
+
+                    <label for="text1" class="control-label col-lg-4">Bust</label>
+
+                    <div class="col-lg-8">
+
+                        <input type="text" id="bust" name='bust' placeholder="Bust" class="form-control" maxlength='20' />
+
+                    </div>
+
+                </div>
+
 
 
                 <div class="form-group">
@@ -363,19 +397,24 @@ $filepath = $_FILES["modelCard"]["tmp_name"];
 
 
 
-                <div class="form-group">
 
-                    <label for="text1" class="control-label col-lg-4">Model Card</label>
+                 <div class="form-group">
+                        <label for="text4" class="control-label col-lg-4">Model Card</label>
+
+                        <div class="col-lg-8">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="assets/img/demoUpload.jpg" alt="" /></div>
+                                <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                <div>
+                                    <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"  name = 'modelCard' /></span>
+                                    <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+
+                 </div>
 
 
-
-                    <div class="col-lg-8">
-
-                        <input type="file" name="modelCard" />
-
-                    </div>
-
-                </div>
 
 
 
